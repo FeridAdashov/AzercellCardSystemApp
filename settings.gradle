@@ -1,0 +1,5 @@
+rootProject.name = "AzercellCardSystem"
+include ':data'
+include ':common'
+include ':domain'
+include ':app'

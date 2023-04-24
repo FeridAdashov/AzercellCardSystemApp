@@ -1,0 +1,1 @@
+-keep class com.azercell.cardsystem.common.R$font { *; }

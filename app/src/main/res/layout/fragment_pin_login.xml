@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/dimen16"
+        android:paddingRight="@dimen/dimen16"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/imgViewLogo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/app_logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/dotsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgViewLogo">
+
+            <View
+                android:id="@+id/dotView1"
+                android:layout_width="@dimen/dimen16"
+                android:layout_height="@dimen/dimen16"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/circle_gray_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/dotView2"
+                android:layout_width="@dimen/dimen16"
+                android:layout_height="@dimen/dimen16"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/circle_gray_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/dotView3"
+                android:layout_width="@dimen/dimen16"
+                android:layout_height="@dimen/dimen16"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/circle_gray_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <View
+                android:id="@+id/dotView4"
+                android:layout_width="@dimen/dimen16"
+                android:layout_height="@dimen/dimen16"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/circle_gray_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboardLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dotsLayout">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber3"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboardLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/keyboardLayout1">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber4"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber5"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber6"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboardLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/keyboardLayout2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber7"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber8"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber9"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboardLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/keyboardLayout3">
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/tvCancel"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:fontFamily="@font/sf_pro_display_medium"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Cancel"-->
+<!--                android:textColor="@color/tvTextColor2"-->
+<!--                android:textSize="14sp" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_fingerprint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNumber0"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/tvTextColor2"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/tvDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_keyboard_back" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

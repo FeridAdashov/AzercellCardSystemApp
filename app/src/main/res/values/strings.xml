@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name" translatable="false">AzercellCardSystem</string>
+    <string name="have_troubles">We have some troubles. Try later</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="give_cellular_access_from_settings">Give access to use cellular data from settings</string>
+    <string name="check_network">"Please check your network!"</string>
+    <string name="warning">Warning</string>
+    <string name="OK">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_internet_connection">Please, check your internet connection</string>
+    <string name="unauthorizedRequest">Unauthorized Request</string>
+    <string name="login">Login</string>
+    <string name="az">Azerbaijan</string>
+    <string name="en">English</string>
+    <string name="ru">Russian</string>
+    <string name="change_language">Change language</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="log_out">Log out</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="settings">Settings</string>
+    <string name="close">Close</string>
+    <string name="error">Error</string>
+    <string name="invalid_pin">Invalid Pin</string>
+    <string name="language">Language</string>
+    <string name="socket_exception">Socket exception</string>
+    <string name="timeout_exception">Timeout exception</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="user_not_found">User not found</string>
+    <string name="data_parse_error">Data parse error</string>
+    <string name="data_not_found">Data not found</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="birthday">Birthday</string>
+    <string name="create_user">Create user</string>
+    <string name="mobile_number_with_994">+994 Mobile number</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="cards">Cards</string>
+    <string name="dont_have_card_info">You don\'t have any card yet (</string>
+    <string name="add_card">Add card</string>
+    <string name="expire">EXPIRE</string>
+    <string name="cvv">CVV</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="name_surname">Name Surname</string>
+    <string name="next">Next</string>
+    <string name="transfer_money">Transfer money</string>
+    <string name="increase_balance">Increase balance</string>
+    <string name="balance_increased">Balance increased!</string>
+    <string name="dont_have_history">You don\'t have any history yet (</string>
+    <string name="type_amount">Type amount</string>
+    <string name="wrong_amount">Wrong amount!</string>
+    <string name="select_card">Select card</string>
+    <string name="must_have_at_least_two_cards">You must have at least two cards to make transfer.</string>
+    <string name="not_enough_amount">Card does not have enough money!</string>
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.azercell.cardsystem.ui.LaunchFragment"
+        android:label="LaunchFragment">
+        <action
+            android:id="@+id/action_launchFragment_to_pinLoginFragment"
+            app:destination="@id/pinLoginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/launchFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cardsFragment"
+        android:name="com.azercell.cardsystem.ui.CardsFragment"
+        android:label="CardsFragment" />
+
+    <fragment
+        android:id="@+id/addCardFragment"
+        android:name="com.azercell.cardsystem.ui.AddCardFragment"
+        android:label="AddCardFragment" />
+
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.azercell.cardsystem.ui.CreateUserFragment"
+        android:label="CreateUserFragment">
+        <action
+            android:id="@+id/action_createUserFragment_to_cardsFragment"
+            app:destination="@id/cardsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pinLoginFragment"
+        android:name="com.azercell.cardsystem.ui.PinLoginFragment"
+        android:label="PinLoginFragment">
+        <action
+            android:id="@+id/action_pinLoginFragment_to_cardsFragment"
+            app:destination="@id/createUserFragment"
+            app:popUpTo="@id/launchFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.azercell.cardsystem.ui.SettingsFragment"
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_settingsFragment_to_pinLoginFragment"
+            app:destination="@id/pinLoginFragment"
+            app:popUpTo="@id/launchFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

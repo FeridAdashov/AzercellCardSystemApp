@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_dialog"
+    android:padding="@dimen/dimen16">
+
+    <ImageView
+        android:id="@+id/imgCancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_cancel_rounded_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="@string/change_language"
+        android:textColor="@color/tvTextColor3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgCancel" />
+
+    <TextView
+        android:id="@+id/tvEn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/en"
+        android:textColor="@color/tvTextColor3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgRadioEn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvRu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/ru"
+        android:textColor="@color/tvTextColor3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgRadioRu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEn" />
+
+    <TextView
+        android:id="@+id/tvAz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/az"
+        android:textColor="@color/tvTextColor3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imgRadioAz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRu" />
+
+    <ImageView
+        android:id="@+id/imgRadioEn"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_radio_off"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvEn" />
+
+    <ImageView
+        android:id="@+id/imgRadioRu"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_radio_off"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvRu" />
+
+    <ImageView
+        android:id="@+id/imgRadioAz"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_radio_off"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvAz" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

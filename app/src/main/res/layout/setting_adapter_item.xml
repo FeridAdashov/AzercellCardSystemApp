@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutSettingItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/settingAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/gray3"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgViewBookingStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_profile_placeholder" />
+    </androidx.cardview.widget.CardView>
+
+    <com.azercell.cardsystem.common.widgets.textviews.BetterTextView
+        android:id="@+id/tvSettingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:textColor="@color/tvTextColor3"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/tvSettingSubTitle"
+        app:layout_constraintStart_toEndOf="@+id/settingAvatar"
+        app:layout_constraintTop_toTopOf="@id/settingAvatar" />
+
+    <com.azercell.cardsystem.common.widgets.textviews.BetterTextView
+        android:id="@+id/tvSettingSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="Sent you .doc file message"
+        android:textColor="@color/tvTextColor2"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/settingAvatar"
+        app:layout_constraintStart_toStartOf="@+id/tvSettingTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvSettingTitle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right_12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/settingAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/settingAvatar"
+        app:tint="@color/tvTextColor1" />
+
+    <View
+        android:id="@+id/viewUnderline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dimen16"
+        android:background="@color/gray3"
+        app:layout_constraintTop_toBottomOf="@id/settingAvatar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

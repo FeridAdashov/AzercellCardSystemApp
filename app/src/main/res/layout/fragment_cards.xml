@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layoutAppBar"
+        layout="@layout/app_bar_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen16"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginEnd="@dimen/dimen16"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jama.carouselview.CarouselView
+        android:id="@+id/carouselCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        app:carouselOffset="center"
+        app:enableSnapping="true"
+        app:indicatorAnimationType="drop"
+        app:indicatorPadding="5"
+        app:indicatorRadius="5"
+        app:indicatorSelectedColor="@color/primary"
+        app:indicatorUnselectedColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/layoutAppBar"
+        app:resource="@layout/credit_card"
+        app:scaleOnScroll="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBarCards"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminateTint="@color/primary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/carouselCards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/carouselCards" />
+
+    <io.armcha.elasticview.ElasticView
+        android:id="@+id/imageElasticViewIncreaseBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toStartOf="@id/imageElasticViewMoneyTransfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carouselCards">
+
+        <com.azercell.cardsystem.common.widgets.buttons.CustomRoundedButton
+            android:id="@+id/btnIncreaseBalance"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/increase_balance"
+            android:textColor="@color/primary"
+            app:icon="@drawable/ic_add_outlined"
+            app:iconSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/carouselCards"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="1dp" />
+    </io.armcha.elasticview.ElasticView>
+
+    <io.armcha.elasticview.ElasticView
+        android:id="@+id/imageElasticViewMoneyTransfer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageElasticViewIncreaseBalance"
+        app:layout_constraintTop_toBottomOf="@id/carouselCards">
+
+        <com.azercell.cardsystem.common.widgets.buttons.CustomRoundedButton
+            android:id="@+id/btnMoneyTransfer"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/transfer_money"
+            android:textColor="@color/primary"
+            app:icon="@drawable/img_money_send"
+            app:iconSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/carouselCards"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="1dp" />
+    </io.armcha.elasticview.ElasticView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheetViewTransferHistory"
+        style="?attr/bottomSheetStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen16"
+        android:background="@drawable/bottomsheet_background_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingLeft="@dimen/dimen16"
+        android:paddingRight="@dimen/dimen16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageElasticViewIncreaseBalance">
+
+        <ImageView
+            android:id="@+id/imageViewBottomSheetExpand"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_line_remove"
+            app:tint="@color/gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/bottomNavBarSize"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewBottomSheetExpand"
+            tools:listitem="@layout/card_history_item" />
+
+        <com.azercell.cardsystem.common.widgets.textviews.BetterTextView
+            android:id="@+id/tvNoHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="@string/dont_have_history"
+            android:textColor="@color/tvTextColor3"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.azercell.cardsystem.common.widgets.textviews.BetterTextView
+        android:id="@+id/tvNoCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:text="@string/dont_have_card_info"
+        android:textColor="@color/tvTextColor3"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/hasCardViewGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="carouselCards,imageElasticViewIncreaseBalance,imageElasticViewMoneyTransfer,bottomSheetViewTransferHistory" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen16">
+
+    <include
+        android:id="@+id/layoutAppBar"
+        layout="@layout/app_bar_block" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutAppBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/layoutAppBar">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/Widget.AppTheme.TextInputLayoutList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/name"
+                app:boxStrokeColor="@color/gray2"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/buttonTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="17sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSurname"
+                style="@style/Widget.AppTheme.TextInputLayoutList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/surname"
+                app:boxStrokeColor="@color/gray2"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/buttonTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="17sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBirthday"
+                style="@style/Widget.AppTheme.TextInputLayoutList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/birthday"
+                app:boxStrokeColor="@color/gray2"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/buttonTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="17sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMobileNumber"
+                style="@style/Widget.AppTheme.TextInputLayoutList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/mobile_number_with_994"
+                app:boxStrokeColor="@color/gray2"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/buttonTextColor"
+                app:prefixTextColor="@color/buttonTextColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="17sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.azercell.cardsystem.common.widgets.buttons.CustomRoundedButton
+                android:id="@+id/btnCreateUser"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/primary"
+                android:text="@string/create_user"
+                android:textColor="@color/white"
+                app:strokeWidth="0dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

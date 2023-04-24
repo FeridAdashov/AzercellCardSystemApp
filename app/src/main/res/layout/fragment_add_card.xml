@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addCardParentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/dimen16">
+
+    <include
+        android:id="@+id/layoutAppBar"
+        layout="@layout/app_bar_block" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutAppBar">
+
+        <FrameLayout
+            android:id="@+id/credit_card_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/credit_card_type_info_back" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/credit_card_front"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/credit_card_type_info_front" />
+        </FrameLayout>
+
+        <com.azercell.cardsystem.common.widgets.buttons.CustomRoundedButton
+            android:id="@+id/btnAddCard"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/primary"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:strokeWidth="0dp" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

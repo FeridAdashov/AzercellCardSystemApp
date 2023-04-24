@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="primary">#522f67</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="gray">#B1B5C4</color>
+    <color name="grayTransparent">#4DB1B5C4</color>
+    <color name="gray2">#E6E8EC</color>
+    <color name="gray3">#F4F5F6</color>
+    <color name="buttonTextColor">#23262F</color>
+    <color name="tvTextColor1">#777E91</color>
+    <color name="tvTextColor2">#353945</color>
+    <color name="tvTextColor3">#141416</color>
+    <color name="blue">#3B71FE</color>
+    <color name="red">#FF1100</color>
+    <color name="red2">#FB3640</color>
+    <color name="red10">#1AFF1100</color>
+    <color name="red60">#9AFF0000</color>
+    <color xmlns:tools="http://schemas.android.com/tools" name="mtrl_textinput_default_box_stroke_color" tools:override="true">
+        #E6E8EC
+    </color>
+
+    <color name="grey_10">#e6e6e6</color>
+</resources>
