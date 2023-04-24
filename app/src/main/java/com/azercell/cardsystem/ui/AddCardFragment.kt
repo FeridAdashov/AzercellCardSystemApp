@@ -183,9 +183,9 @@ class AddCardFragment(
             hideProgress()
 
             if (baseEntity is RequestResult.Success<BaseEntity>) {
-                mCardsViewModel.getAllCards()
                 mBaseActivity.showToast("Added!")
                 findNavController().popBackStack()
+                mCardsViewModel.getAllCards()
             } else if (baseEntity is RequestResult.Error) {
                 errorHappened(BaseEntity(baseEntity.code, baseEntity.message))
             }
